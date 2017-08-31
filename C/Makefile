@@ -41,12 +41,26 @@ clean:
 	@rm -rf .obj
 	@echo "\033[96mClean done 😡\033[97m"
 
-fclean: clean
+fclean: clean quine
 	@echo "\033[92mDeleting 💀\033[97m"
 	@rm -f $(NAME)
 	@rm -f $(NAME2)
 	@rm -f $(NAME3)
 	@echo "\033[96mFclean Done 👿\033[97m"
+
+quine: clean
+	@rm -rf Sully_*
+	@rm -rf Grace_kid.c
+
+run: colleen
+	@./colleen
+
+run2: grace
+	@./grace
+	@cat Grace_kid.c
+
+run3: sully
+	@./sully
 
 re: fclean all
 
